@@ -3,7 +3,6 @@
 #include <variant>
 #include <sstream>
 #include <algorithm>
-#include <tuple>
 
 struct CurrencyExchanger {
     int id = 0;
@@ -38,12 +37,7 @@ int main()
     }
 
     decltype(CurrencyExchangerVector)::iterator maxEl1, maxEl2, maxEl3, maxEl4;
-
-    /*std::sort(begin(CurrencyExchangerVector), end(CurrencyExchangerVector),
-        [](const CurrencyExchanger& a, const CurrencyExchanger& b) {
-            return a.nameOfExchanger < b.nameOfExchanger;
-        });*/
-     
+       
     maxEl1 = std::max_element(begin(CurrencyExchangerVector), end(CurrencyExchangerVector),
         [](const CurrencyExchanger& a, const CurrencyExchanger& b)
         {             
